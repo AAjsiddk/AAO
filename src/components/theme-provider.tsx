@@ -29,56 +29,53 @@ export function ThemeProvider({
   children,
   defaultTheme = 'system',
   storageKey = 'ui-theme',
+  enableSystem = true,
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window === 'undefined') {
-      return defaultTheme;
-    }
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+
+  useEffect(() => {
     try {
-      return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+      const storedTheme = (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+      setTheme(storedTheme);
     } catch (e) {
-      console.warn('Failed to access localStorage:', e);
-      return defaultTheme;
+      // Ignore
     }
-  });
+  }, [defaultTheme, storageKey]);
+
 
   useEffect(() => {
     const root = window.document.documentElement;
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    root.classList.remove('light', 'dark');
 
-    const applyTheme = (currentTheme: Theme) => {
-      root.classList.remove('light', 'dark');
+    const effectiveTheme = theme === 'system' && enableSystem
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      : theme;
 
-      let effectiveTheme = currentTheme;
-      if (currentTheme === 'system') {
-        effectiveTheme = mediaQuery.matches ? 'dark' : 'light';
-      }
-      
-      root.classList.add(effectiveTheme);
+    if (effectiveTheme) {
+        root.classList.add(effectiveTheme);
     }
-
-    const handleSystemChange = (e: MediaQueryListEvent) => {
-      if (theme === 'system') {
-         applyTheme('system');
-      }
-    };
     
-    applyTheme(theme);
-    
-    mediaQuery.addEventListener('change', handleSystemChange);
-    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+    if (theme === 'system' && enableSystem) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handler = (e: MediaQueryListEvent) => {
+        root.classList.remove('light', 'dark');
+        root.classList.add(e.matches ? 'dark' : 'light');
+      };
 
-  }, [theme]);
+      mediaQuery.addEventListener('change', handler);
+      return () => mediaQuery.removeEventListener('change', handler);
+    }
+  }, [theme, enableSystem]);
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
+    setTheme: (newTheme: Theme) => {
       try {
-        localStorage.setItem(storageKey, theme);
+        localStorage.setItem(storageKey, newTheme);
       } catch (e) {
-        console.warn('Failed to access localStorage:', e);
+        // Ignore
       }
-      setTheme(theme);
+      setTheme(newTheme);
     },
   };
 

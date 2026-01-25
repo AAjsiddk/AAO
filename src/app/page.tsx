@@ -5,15 +5,16 @@ import { LinkCard } from '@/components/link-card';
 import { links } from '@/lib/links';
 import { ShareButton } from '@/components/share-button';
 import { BookHeart, MessageSquareQuote } from 'lucide-react';
+import { CurrentYear } from '@/components/current-year';
 
 const QuoteOfTheDay = () => {
   return (
-    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/20">
+    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/20 backdrop-blur-sm transition-all hover:border-primary/20">
       <div
         className="absolute inset-0 -z-10 rounded-2xl"
         style={{
           boxShadow:
-            '0 0 30px -15px hsl(var(--primary) / 0.3), 0 0 15px -15px hsl(var(--accent) / 0.3)',
+            '0 0 60px -20px hsl(var(--primary) / 0.4), 0 0 30px -20px hsl(var(--accent) / 0.4)',
         }}
       />
       <div className="flex flex-col items-center gap-3">
@@ -46,7 +47,7 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto flex w-full flex-1 flex-col items-center justify-center px-4 py-24">
-        <div className="w-full max-w-4xl space-y-4 text-center">
+        <div className="w-full max-w-4xl space-y-2 text-center">
           <div className="flex flex-col items-center space-y-3">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               رفيق{' '}
@@ -54,7 +55,7 @@ export default function Home() {
                 className="text-primary"
                 style={{
                   textShadow:
-                    '0 0 8px hsl(var(--primary) / 0.5), 0 0 16px hsl(var(--accent) / 0.3)',
+                    '0 0 12px hsl(var(--primary) / 0.6), 0 0 24px hsl(var(--accent) / 0.4)',
                 }}
               >
                 رمضان
@@ -66,9 +67,11 @@ export default function Home() {
             </p>
           </div>
 
-          <QuoteOfTheDay />
+          <div className="py-2">
+            <QuoteOfTheDay />
+          </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link, index) => (
               <div
                 key={link.title}
@@ -85,7 +88,7 @@ export default function Home() {
           </div>
 
           <div
-            className="animate-in fade-in slide-in-from-bottom-10 duration-700 mx-auto w-full max-w-sm"
+            className="animate-in fade-in slide-in-from-bottom-10 duration-700 mx-auto w-full max-w-sm pt-2"
             style={{ animationDelay: '1200ms', animationFillMode: 'both' }}
           >
             <ShareButton />
@@ -102,7 +105,7 @@ export default function Home() {
             بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.
           </p>
           <p className="mt-4 text-xs text-muted-foreground/60">
-            جميع الحقوق محفوظة © {new Date().getFullYear()} رفيق رمضان
+            جميع الحقوق محفوظة © <CurrentYear /> رفيق رمضان
           </p>
         </div>
       </footer>

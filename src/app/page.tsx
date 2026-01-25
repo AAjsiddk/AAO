@@ -9,7 +9,7 @@ import { BookHeart, MessageSquareQuote } from 'lucide-react';
 const QuoteOfTheDay = () => {
   return (
     <div
-      className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-2 border-primary/20 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/40 hover:shadow-primary/20"
+      className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border border-primary/20 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/40 hover:shadow-primary/20"
     >
       <div className="flex flex-col items-center gap-4">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
@@ -28,7 +28,7 @@ const QuoteOfTheDay = () => {
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background text-foreground">
+    <div className="relative flex min-h-screen w-full flex-col overflow-hidden bg-background text-foreground">
       <div className="bg-grid-pattern fixed inset-0 -z-10" />
       <div className="bg-radial-gradient fixed inset-0 -z-10" />
 
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="w-full border-t border-border/20 bg-card/50 py-8">
+      <footer className="w-full border-t border-border/20 bg-background/50 py-8 backdrop-blur-sm">
         <div className="container flex flex-col items-center gap-4 text-center">
           <BookHeart className="h-8 w-8 text-primary" />
           <p className="max-w-lg text-base text-muted-foreground">

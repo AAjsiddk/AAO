@@ -9,7 +9,7 @@ export function LinkCard({ link }: { link: LinkItem }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex h-full transform-gpu flex-col justify-between rounded-2xl border-2 border-primary/20 bg-card/50 p-6 text-right shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-2xl hover:shadow-accent/20"
+      className="group relative flex h-full transform-gpu flex-col justify-between rounded-2xl border border-border/50 bg-card/60 p-6 text-right shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-2xl hover:shadow-accent/20"
     >
       <div className="flex flex-col gap-4 items-start text-right">
         <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-accent group-hover:text-accent-foreground">

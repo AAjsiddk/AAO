@@ -67,3 +67,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+    .bg-grid-pattern {
+        @apply bg-no-repeat bg-center;
+        background-image: linear-gradient(hsl(var(--border) / 0.1) 1px, transparent 1px), linear-gradient(to right, hsl(var(--border) / 0.1) 1px, transparent 1px);
+        background-size: 30px 30px;
+    }
+    .bg-radial-gradient {
+        @apply bg-no-repeat;
+        background-image: radial-gradient(circle at 50% 0, hsl(var(--primary) / 0.1), transparent 40%);
+    }
+}

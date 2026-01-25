@@ -8,11 +8,16 @@ import { BookHeart, MessageSquareQuote } from 'lucide-react';
 
 const QuoteOfTheDay = () => {
   return (
-    <div
-      className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border border-primary/20 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/40 hover:shadow-primary/20"
-    >
+    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/20 hover:shadow-primary/20">
+      <div
+        className="absolute inset-0 -z-10 rounded-2xl"
+        style={{
+          boxShadow:
+            '0 0 80px -20px hsl(var(--primary)), 0 0 60px -30px hsl(var(--accent))',
+        }}
+      />
       <div className="flex flex-col items-center gap-4">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30">
           <MessageSquareQuote className="h-8 w-8" />
         </div>
         <p className="text-xl font-bold tracking-tight text-primary">
@@ -28,7 +33,7 @@ const QuoteOfTheDay = () => {
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-hidden bg-background text-foreground">
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background text-foreground">
       <div className="bg-grid-pattern fixed inset-0 -z-10" />
       <div className="bg-radial-gradient fixed inset-0 -z-10" />
 
@@ -41,15 +46,15 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto flex w-full flex-1 flex-col items-center justify-center px-4 py-24">
-        <div className="w-full max-w-4xl space-y-20 text-center">
-          <div className="flex flex-col items-center space-y-6">
+        <div className="w-full max-w-4xl space-y-12 text-center">
+          <div className="flex flex-col items-center space-y-4">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               رفيق{' '}
               <span
                 className="text-primary"
                 style={{
                   textShadow:
-                    '0 0 15px hsl(var(--primary)), 0 0 30px hsl(var(--accent) / 0.7)',
+                    '0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--accent) / 0.7)',
                 }}
               >
                 رمضان
@@ -63,7 +68,7 @@ export default function Home() {
 
           <QuoteOfTheDay />
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link, index) => (
               <div
                 key={link.title}
@@ -81,22 +86,22 @@ export default function Home() {
 
           <div
             className="animate-in fade-in slide-in-from-bottom-10 duration-700 mx-auto w-full max-w-sm"
-            style={{ animationDelay: '1500ms', animationFillMode: 'both' }}
+            style={{ animationDelay: '1200ms', animationFillMode: 'both' }}
           >
             <ShareButton />
           </div>
         </div>
       </main>
 
-      <footer className="w-full border-t border-border/20 bg-background/50 py-8 backdrop-blur-sm">
-        <div className="container flex flex-col items-center gap-4 text-center">
+      <footer className="w-full border-t border-border/20 bg-background/50 py-6 backdrop-blur-sm">
+        <div className="container flex flex-col items-center gap-3 text-center">
           <BookHeart className="h-8 w-8 text-primary" />
           <p className="max-w-lg text-base text-muted-foreground">
             رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر
             مصمم ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة،
             بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.
           </p>
-          <p className="mt-6 text-sm text-muted-foreground/60">
+          <p className="mt-4 text-sm text-muted-foreground/60">
             جميع الحقوق محفوظة © {new Date().getFullYear()} رفيق رمضان
           </p>
         </div>

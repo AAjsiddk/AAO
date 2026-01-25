@@ -12,6 +12,8 @@ export function LinkCard({ link }: { link: LinkItem }) {
       className="group relative flex h-full transform-gpu flex-col justify-between rounded-2xl border border-border/20 bg-card/60 p-6 text-right shadow-lg shadow-black/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-accent hover:shadow-2xl hover:shadow-accent/20"
       style={{
         transformStyle: 'preserve-3d',
+        boxShadow:
+          '0 0 25px -10px hsl(var(--primary) / 0.2), 0 0 15px -15px hsl(var(--accent) / 0.2)',
       }}
     >
       <div

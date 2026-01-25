@@ -13,7 +13,7 @@ const QuoteOfTheDay = () => {
         className="absolute inset-0 -z-10 rounded-2xl"
         style={{
           boxShadow:
-            '0 0 80px -20px hsl(var(--primary)), 0 0 60px -30px hsl(var(--accent))',
+            '0 0 70px -20px hsl(var(--primary) / 0.9), 0 0 50px -30px hsl(var(--accent) / 0.9)',
         }}
       />
       <div className="flex flex-col items-center gap-4">
@@ -46,7 +46,7 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto flex w-full flex-1 flex-col items-center justify-center px-4 py-24">
-        <div className="w-full max-w-4xl space-y-12 text-center">
+        <div className="w-full max-w-4xl space-y-8 text-center">
           <div className="flex flex-col items-center space-y-4">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               رفيق{' '}
@@ -54,7 +54,7 @@ export default function Home() {
                 className="text-primary"
                 style={{
                   textShadow:
-                    '0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--accent) / 0.7)',
+                    '0 0 15px hsl(var(--primary)), 0 0 30px hsl(var(--accent) / 0.6)',
                 }}
               >
                 رمضان

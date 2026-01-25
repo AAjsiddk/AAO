@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute bottom-[-20%] right-[-20%] top-auto h-[600px] w-[600px] rounded-full bg-accent/10 opacity-50 blur-[120px]"></div>
       </div>
 
-      <header className="sticky top-0 z-40 w-full border-b border-transparent bg-background/80 backdrop-blur-sm">
+      <header className="sticky top-0 z-40 w-full border-b border-border/10 bg-background/80 backdrop-blur-sm">
         <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="rounded-lg bg-primary/10 p-2 text-primary">
@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t border-border/50 bg-card/50 py-8 md:px-8 md:py-10">
+      <footer className="border-t border-border/50 py-8 md:px-8 md:py-10">
         <div className="container flex flex-col items-center justify-center gap-4 text-center">
           <p className="text-md text-muted-foreground">
             منصة منارة الإيمان - أُنشئت لتكون عونًا لك في رحلتك الروحية.

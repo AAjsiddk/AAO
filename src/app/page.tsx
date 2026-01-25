@@ -9,7 +9,7 @@ import { CurrentYear } from '@/components/current-year';
 
 const QuoteOfTheDay = () => {
   return (
-    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/20 backdrop-blur-sm transition-all hover:border-primary/20">
+    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-500 relative w-full rounded-2xl border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/20 backdrop-blur-sm transition-all hover:border-primary/20">
       <div
         className="absolute inset-0 -z-10 rounded-2xl"
         style={{
@@ -49,7 +49,7 @@ export default function Home() {
       <main className="container mx-auto flex w-full flex-1 flex-col items-center justify-center px-4 py-24">
         <div className="w-full max-w-4xl space-y-2 text-center">
           <div className="flex flex-col items-center space-y-3">
-            <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
+            <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-700 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               رفيق{' '}
               <span
                 className="text-primary"
@@ -61,7 +61,7 @@ export default function Home() {
                 رمضان
               </span>
             </h1>
-            <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-md text-muted-foreground md:text-lg">
+            <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-700 delay-100 max-w-2xl text-md text-muted-foreground md:text-lg">
               ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم،
               تتقرب الي الله، وتكمّل خطوة بخطوة. مش مطلوب الكمال… المهم الاستمرار.
             </p>
@@ -75,9 +75,9 @@ export default function Home() {
             {links.map((link, index) => (
               <div
                 key={link.title}
-                className="animate-in fade-in slide-in-from-bottom-10 duration-700"
+                className="animate-in fade-in slide-in-from-bottom-10 duration-500"
                 style={{
-                  animationDelay: `${800 + index * 100}ms`,
+                  animationDelay: `${400 + index * 80}ms`,
                   willChange: 'transform, opacity',
                   animationFillMode: 'both',
                 }}
@@ -88,8 +88,8 @@ export default function Home() {
           </div>
 
           <div
-            className="animate-in fade-in slide-in-from-bottom-10 duration-700 mx-auto w-full max-w-sm pt-2"
-            style={{ animationDelay: '1200ms', animationFillMode: 'both' }}
+            className="animate-in fade-in slide-in-from-bottom-10 duration-500 mx-auto w-full max-w-sm pt-2"
+            style={{ animationDelay: `${400 + links.length * 80}ms`, animationFillMode: 'both' }}
           >
             <ShareButton />
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
       </main>
 
       <footer className="w-full border-t border-border/20 bg-background/50 py-6 backdrop-blur-sm">
-        <div className="container flex flex-col items-center gap-3 text-center">
+        <div className="container flex flex-col items-center justify-center gap-3 text-center">
           <BookHeart className="h-8 w-8 text-primary" />
           <p className="max-w-lg text-sm text-muted-foreground">
             رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر

@@ -11,13 +11,13 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: 'رحلة اليقين | دليلك إلى الطمأنينة',
+  title: 'منارة الإيمان | طريقك نحو السمو الروحي',
   description:
-    'اكتشف مصادر قيمة وأدوات ملهمة لتعميق إيمانك وإثراء رحلتك الروحية. دليلك نحو حياة أكثر سكينة وقربًا من الله.',
+    'بوابتك الرقمية نحو عالم من السكينة والنور. اكتشف أدوات ومصادر إيمانية فريدة، صُممت لإلهامك وتقوية صلتك بالخالق.',
   openGraph: {
-    title: 'رحلة اليقين | دليلك إلى الطمأنينة',
+    title: 'منارة الإيمان | طريقك نحو السمو الروحي',
     description:
-      'اكتشف مصادر قيمة وأدوات ملهمة لتعميق إيمانك وإثراء رحلتك الروحية.',
+      'اكتشف أدوات ومصادر إيمانية فريدة، صُممت لإلهامك وتقوية صلتك بالخالق.',
     images: ['https://i.postimg.cc/d7wz9RmJ/Untitled-1.png'],
     type: 'website',
     url: '/',
@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={`${tajawal.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

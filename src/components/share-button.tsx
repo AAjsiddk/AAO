@@ -32,9 +32,11 @@ const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function ShareButton() {
   const { toast } = useToast();
   const [url, setUrl] = React.useState('');
+  const [title, setTitle] = React.useState('');
 
   React.useEffect(() => {
     setUrl(window.location.href);
+    setTitle(document.title);
   }, []);
 
   const copyLink = () => {
@@ -46,7 +48,7 @@ export function ShareButton() {
   };
 
   const shareOnWhatsApp = () => {
-    const text = `اكتشف "دليل النجاة" - دليلك لمصادر نافعة تساعدك على الثبات والقرب من الله: ${url}`;
+    const text = `✨ اكتشف "${title}" ✨\n\nبوابتك الرقمية نحو عالم من السكينة والنور. مصادر إيمانية فريدة لإلهامك وتقوية صلتك بالخالق.\n\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -55,7 +57,7 @@ export function ShareButton() {
       `https://t.me/share/url?url=${encodeURIComponent(
         url
       )}&text=${encodeURIComponent(
-        `اكتشف "دليل النجاة" - دليلك لمصادر نافعة تساعدك على الثبات والقرب من الله.`
+        `✨ اكتشف "${title}" ✨\n\nبوابتك الرقمية نحو عالم من السكينة والنور. مصادر إيمانية فريدة لإلهامك وتقوية صلتك بالخالق.`
       )}`,
       '_blank'
     );

@@ -1,23 +1,24 @@
 'use client';
 
-import { useState } from 'react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { LinkCard } from '@/components/link-card';
 import { links } from '@/lib/links';
 import { ShareButton } from '@/components/share-button';
-import { BookHeart, Sparkles } from 'lucide-react';
+import { BookHeart, MessageSquareQuote } from 'lucide-react';
 
-const VerseOfTheDay = () => {
+const QuoteOfTheDay = () => {
   return (
     <div
       className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-2 border-primary/20 bg-card p-6 text-center shadow-2xl shadow-primary/10"
     >
       <div className="flex flex-col items-center gap-4">
-        <Sparkles className="h-8 w-8 text-primary" />
-        <p className="text-2xl font-bold tracking-tight text-primary">
-          "فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ"
+        <MessageSquareQuote className="h-8 w-8 text-primary" />
+        <p className="text-xl font-bold tracking-tight text-primary">
+          "إِذَا مَاتَ ابنُ آدم انْقَطَعَ عَنْهُ عَمَلُهُ إِلَّا مِنْ ثَلَاثٍ:
+          صَدَقَةٍ جَارِيَةٍ، أو عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ
+          يَدْعُو لَهُ."
         </p>
-        <p className="text-lg text-muted-foreground">(البقرة: 152)</p>
+        <p className="text-lg text-muted-foreground">(رَوَاهُ مُسْلِمٌ)</p>
       </div>
     </div>
   );
@@ -42,7 +43,7 @@ export default function Home() {
             </p>
           </div>
 
-          <VerseOfTheDay />
+          <QuoteOfTheDay />
           
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link, index) => (
@@ -52,6 +53,7 @@ export default function Home() {
                 style={{
                   animationDelay: `${800 + index * 100}ms`,
                   willChange: 'transform, opacity',
+                  animationFillMode: 'both',
                 }}
               >
                 <LinkCard link={link} />
@@ -61,7 +63,7 @@ export default function Home() {
 
           <div
             className="animate-in fade-in slide-in-from-bottom-10 duration-700 w-full max-w-sm mx-auto"
-            style={{ animationDelay: '1500ms' }}
+            style={{ animationDelay: '1500ms', animationFillMode: 'both' }}
           >
             <ShareButton />
           </div>

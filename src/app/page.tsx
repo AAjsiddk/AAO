@@ -5,65 +5,46 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { LinkCard } from '@/components/link-card';
 import { links } from '@/lib/links';
 import { ShareButton } from '@/components/share-button';
-import { X, MessageSquareText } from 'lucide-react';
+import { BookHeart, Sparkles } from 'lucide-react';
 
-const MessageOfTheDay = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  if (!isOpen) {
-    return null;
-  }
-
+const VerseOfTheDay = () => {
   return (
-    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-500 relative w-full rounded-lg border border-border bg-card/50 p-4 pr-10 shadow-lg">
-      <button
-        onClick={() => setIsOpen(false)}
-        aria-label="إغلاق الرسالة"
-        className="absolute right-3 top-3 rounded-md p-1 text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-      >
-        <X className="h-5 w-5" />
-      </button>
-      <div className="flex items-start gap-4">
-        <div className="mt-1 flex-shrink-0 text-primary">
-          <MessageSquareText className="h-6 w-6" />
-        </div>
-        <div>
-          <h4 className="mb-1 text-lg font-bold">رسالة اليوم</h4>
-          <p className="text-sm text-muted-foreground">
-            رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر مصمم
-            ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة، بلا ضغط
-            أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.
-          </p>
-        </div>
+    <div
+      className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-2 border-primary/20 bg-card p-6 text-center shadow-2xl shadow-primary/10"
+    >
+      <div className="flex flex-col items-center gap-4">
+        <Sparkles className="h-8 w-8 text-primary" />
+        <p className="text-2xl font-bold tracking-tight text-primary">
+          "فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ"
+        </p>
+        <p className="text-lg text-muted-foreground">(البقرة: 152)</p>
       </div>
     </div>
   );
 };
 
-
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col overflow-x-hidden bg-background text-foreground">
-      
-      <header className="absolute top-0 left-0 z-50 p-4">
+      <header className="absolute left-4 top-4 z-50 p-4">
         <ThemeToggle />
       </header>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center p-4">
-        <div className="w-full max-w-2xl space-y-12 text-center">
-          
-          <div className="flex flex-col items-center space-y-4">
-              <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
-                رفيق <span className="text-primary">رمضان</span>
-              </h1>
-              <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-xl text-lg text-muted-foreground md:text-xl">
-                ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم، تقرّب، وتكمّل خطوة بخطوة. مش مطلوب الكمال… المهم الاستمرار.
-              </p>
+        <div className="w-full max-w-3xl space-y-16 text-center">
+          <div className="flex flex-col items-center space-y-6">
+            <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
+              رفيق <span className="text-primary">رمضان</span>
+            </h1>
+            <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-lg text-muted-foreground md:text-xl">
+              ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم،
+              تقرّب، وتكمّل خطوة بخطوة. مش مطلوب الكمال… المهم الاستمرار.
+            </p>
           </div>
-            
-          <MessageOfTheDay />
+
+          <VerseOfTheDay />
           
-          <div className="flex w-full flex-col gap-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link, index) => (
               <div
                 key={link.title}
@@ -77,17 +58,25 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
-          <div className="animate-in fade-in slide-in-from-bottom-10 duration-700 w-full max-w-sm mx-auto" style={{ animationDelay: '1500ms' }}>
-              <ShareButton />
-          </div>
 
+          <div
+            className="animate-in fade-in slide-in-from-bottom-10 duration-700 w-full max-w-sm mx-auto"
+            style={{ animationDelay: '1500ms' }}
+          >
+            <ShareButton />
+          </div>
         </div>
       </main>
 
-      <footer className="w-full py-6">
-        <div className="container text-center">
-          <p className="text-sm text-muted-foreground">
+      <footer className="w-full py-8">
+        <div className="container flex flex-col items-center gap-2 text-center">
+           <BookHeart className="h-8 w-8 text-primary" />
+          <p className="max-w-md text-sm text-muted-foreground">
+            رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر
+            مصمم ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة،
+            بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.
+          </p>
+           <p className="mt-4 text-xs text-muted-foreground/50">
             جميع الحقوق محفوظة © {new Date().getFullYear()} رفيق رمضان
           </p>
         </div>

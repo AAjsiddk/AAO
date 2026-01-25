@@ -35,42 +35,42 @@ export const links: LinkItem[] = [
   {
     title: 'تحميل الدفتر',
     description:
-      'رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر مصمم ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة، بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.',
+      'دفترك الرمضاني للتخطيط والمتابعة اليومية.',
     href: 'https://drive.google.com/file/d/19i9mmJwukaGISMEapCkrcHf6L3SaxjsN/view?usp=drivesdk',
     Icon: BookOpenCheck,
   },
   {
     title: 'تحميل التطبيق (Lumin)',
     description:
-      'تطبيق خفيف ومميز لفتح دفتر رمضان على هاتفك، مع أدوات تصفح مريحة وواضحة.',
+      'تطبيق مميز لفتح الدفتر وتصفحه على هاتفك.',
     href: 'https://play.google.com/store/apps/details?id=com.luminpdfapp',
     Icon: Smartphone,
   },
   {
     title: 'موقع نجاتك بيدك',
     description:
-      'منصة إسلامية متكاملة تجمع لك الأذكار، القرآن، وروابط نافعة في مكان واحد.',
+      'منصة إسلامية متكاملة للأذكار والقرآن الكريم.',
     href: 'https://in-your-hands.vercel.app/',
     Icon: Globe,
   },
   {
     title: 'تحميل تطبيق نجاتك',
     description:
-      'نسخة التطبيق من موقع نجاتك بيدك لتصل للمحتوى بسهولة وفي أي وقت بدون متصفح.',
+      'نسخة التطبيق من موقع نجاتك للوصول السريع.',
     href: 'https://www.mediafire.com/file/hka968xggvz4qdj/app-release+-+٢٠٢٦-٠١-٢٥T٢٠٤١٤٢.٤٨٣.apk/file',
     Icon: Download,
   },
   {
     title: 'بوت التواصل',
     description:
-      'بوت مخصّص للاستفسارات والمتابعة، وليصلك كل جديد بسرعة وسهولة.',
+      'بوت مخصّص للاستفسارات والمتابعة ليصلك كل جديد.',
     href: 'https://t.me/Ramadan000_bot',
     Icon: Send,
   },
   {
     title: 'قناة واتساب',
     description:
-      'قناة لنشر المحتوى النافع والتنبيهات المهمة أولاً بأول، لتبقى على اتصال دائم بالخير.',
+      'قناة لنشر المحتوى النافع والتنبيهات المهمة.',
     href: 'https://whatsapp.com/channel/0029VbCC6Ta6buMTCGX6Um0F',
     Icon: WhatsAppIcon,
   },

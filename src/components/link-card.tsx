@@ -1,19 +1,22 @@
 import type { LinkItem } from '@/lib/links';
 
 export function LinkCard({ link }: { link: LinkItem }) {
-  const { title, href, Icon } = link;
+  const { title, href, Icon, description } = link;
 
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex w-full items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors duration-200 hover:border-primary"
+      className="group flex h-full transform-gpu flex-col items-center justify-start gap-4 rounded-2xl border-2 border-border bg-card p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl hover:shadow-primary/20"
     >
-      <Icon className="h-5 w-5 text-primary" />
-      <h3 className="flex-1 text-right text-lg font-medium text-foreground">
-        {title}
-      </h3>
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+        <Icon className="h-8 w-8" />
+      </div>
+      <div className="flex flex-col gap-1">
+        <h3 className="text-lg font-bold text-foreground">{title}</h3>
+        <p className="text-sm text-muted-foreground">{description}</p>
+      </div>
     </a>
   );
 }

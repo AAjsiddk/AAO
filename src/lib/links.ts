@@ -89,3 +89,5 @@ export const links: LinkItem[] = [
     Icon: SvgWrapper(WhatsAppIcon),
   },
 ];
+
+export { WhatsAppIcon };

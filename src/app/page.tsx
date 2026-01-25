@@ -35,7 +35,7 @@ export default function Home() {
         <div className="w-full max-w-3xl space-y-16 text-center">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
-              رفيق <span className="text-primary drop-shadow-[0_0_10px_hsl(var(--primary))]">رمضان</span>
+              رفيق <span className="text-accent drop-shadow-[0_0_15px_hsl(var(--primary))]">رمضان</span>
             </h1>
             <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-lg text-muted-foreground md:text-xl">
               ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم،

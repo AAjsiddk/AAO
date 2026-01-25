@@ -2,16 +2,26 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
-import { Cairo } from 'next/font/google';
+import { Tajawal } from 'next/font/google';
 
-const cairo = Cairo({
+const tajawal = Tajawal({
   subsets: ['arabic', 'latin'],
-  variable: '--font-cairo',
+  weight: ['400', '700'],
+  variable: '--font-tajawal',
 });
 
 export const metadata: Metadata = {
-  title: 'دليل النجاة',
-  description: 'دليلك لمصادر نافعة تساعدك على الثبات والقرب من الله.',
+  title: 'رحلة اليقين | دليلك إلى الطمأنينة',
+  description:
+    'اكتشف مصادر قيمة وأدوات ملهمة لتعميق إيمانك وإثراء رحلتك الروحية. دليلك نحو حياة أكثر سكينة وقربًا من الله.',
+  openGraph: {
+    title: 'رحلة اليقين | دليلك إلى الطمأنينة',
+    description:
+      'اكتشف مصادر قيمة وأدوات ملهمة لتعميق إيمانك وإثراء رحلتك الروحية.',
+    images: ['https://i.postimg.cc/d7wz9RmJ/Untitled-1.png'],
+    type: 'website',
+    url: '/',
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
-      <body className={`${cairo.variable} font-sans antialiased`}>
+      <body className={`${tajawal.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

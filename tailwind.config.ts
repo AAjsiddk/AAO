@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-cairo)', 'sans-serif'],
+        sans: ['var(--font-tajawal)', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {

@@ -8,24 +8,24 @@ import { BookHeart, MessageSquareQuote } from 'lucide-react';
 
 const QuoteOfTheDay = () => {
   return (
-    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/20 hover:shadow-primary/20">
+    <div className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border border-primary/10 bg-card/50 p-6 text-center shadow-2xl shadow-primary/10 backdrop-blur-sm transition-all hover:border-primary/20">
       <div
         className="absolute inset-0 -z-10 rounded-2xl"
         style={{
           boxShadow:
-            '0 0 70px -20px hsl(var(--primary) / 0.9), 0 0 50px -30px hsl(var(--accent) / 0.9)',
+            '0 0 30px -15px hsl(var(--primary) / 0.5), 0 0 15px -15px hsl(var(--accent) / 0.5)',
         }}
       />
-      <div className="flex flex-col items-center gap-4">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30">
-          <MessageSquareQuote className="h-8 w-8" />
+      <div className="flex flex-col items-center gap-3">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30">
+          <MessageSquareQuote className="h-7 w-7" />
         </div>
-        <p className="text-xl font-bold tracking-tight text-primary">
+        <p className="text-lg font-bold tracking-tight text-primary">
           "إِذَا مَاتَ ابنُ آدم انْقَطَعَ عَنْهُ عَمَلُهُ إِلَّا مِنْ ثَلَاثٍ:
           صَدَقَةٍ جَارِيَةٍ، أو عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ
           يَدْعُو لَهُ."
         </p>
-        <p className="text-lg text-muted-foreground">(رَوَاهُ مُسْلِمٌ)</p>
+        <p className="text-md text-muted-foreground">(رَوَاهُ مُسْلِمٌ)</p>
       </div>
     </div>
   );
@@ -46,21 +46,21 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto flex w-full flex-1 flex-col items-center justify-center px-4 py-24">
-        <div className="w-full max-w-4xl space-y-8 text-center">
-          <div className="flex flex-col items-center space-y-4">
+        <div className="w-full max-w-4xl space-y-6 text-center">
+          <div className="flex flex-col items-center space-y-3">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               رفيق{' '}
               <span
                 className="text-primary"
                 style={{
                   textShadow:
-                    '0 0 15px hsl(var(--primary)), 0 0 30px hsl(var(--accent) / 0.6)',
+                    '0 0 8px hsl(var(--primary) / 0.8), 0 0 16px hsl(var(--accent) / 0.4)',
                 }}
               >
                 رمضان
               </span>
             </h1>
-            <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-lg text-muted-foreground md:text-xl">
+            <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-md text-muted-foreground md:text-lg">
               ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم،
               تقرّب، وتكمّل خطوة بخطوة. مش مطلوب الكمال… المهم الاستمرار.
             </p>
@@ -68,7 +68,7 @@ export default function Home() {
 
           <QuoteOfTheDay />
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link, index) => (
               <div
                 key={link.title}
@@ -96,12 +96,12 @@ export default function Home() {
       <footer className="w-full border-t border-border/20 bg-background/50 py-6 backdrop-blur-sm">
         <div className="container flex flex-col items-center gap-3 text-center">
           <BookHeart className="h-8 w-8 text-primary" />
-          <p className="max-w-lg text-base text-muted-foreground">
+          <p className="max-w-lg text-sm text-muted-foreground">
             رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر
             مصمم ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة،
             بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground/60">
+          <p className="mt-4 text-xs text-muted-foreground/60">
             جميع الحقوق محفوظة © {new Date().getFullYear()} رفيق رمضان
           </p>
         </div>

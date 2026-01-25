@@ -33,14 +33,14 @@ export type LinkItem = {
 
 export const links: LinkItem[] = [
   {
-    title: 'دفتر رمضان – دليلك العملي',
+    title: 'تحميل الدفتر',
     description:
       'رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر مصمم ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة، بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.',
     href: 'https://drive.google.com/file/d/19i9mmJwukaGISMEapCkrcHf6L3SaxjsN/view?usp=drivesdk',
     Icon: BookOpenCheck,
   },
   {
-    title: 'تطبيق قراءة الملفات (Lumin)',
+    title: 'تحميل التطبيق (Lumin)',
     description:
       'تطبيق خفيف ومميز لفتح دفتر رمضان على هاتفك، مع أدوات تصفح مريحة وواضحة.',
     href: 'https://play.google.com/store/apps/details?id=com.luminpdfapp',
@@ -54,14 +54,14 @@ export const links: LinkItem[] = [
     Icon: Globe,
   },
   {
-    title: 'تطبيق نجاتك بيدك (أندرويد)',
+    title: 'تحميل تطبيق نجاتك',
     description:
       'نسخة التطبيق من موقع نجاتك بيدك لتصل للمحتوى بسهولة وفي أي وقت بدون متصفح.',
     href: 'https://www.mediafire.com/file/hka968xggvz4qdj/app-release+-+٢٠٢٦-٠١-٢٥T٢٠٤١٤٢.٤٨٣.apk/file',
     Icon: Download,
   },
   {
-    title: 'بوت تليجرام للتواصل',
+    title: 'بوت التواصل',
     description:
       'بوت مخصّص للاستفسارات والمتابعة، وليصلك كل جديد بسرعة وسهولة.',
     href: 'https://t.me/Ramadan000_bot',

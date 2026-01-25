@@ -66,12 +66,12 @@ export function ShareButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Share2 className="h-5 w-5" />
-          <span className="sr-only">مشاركة</span>
+        <Button variant="default" size="lg" className="w-full">
+          <Share2 className="ml-2 h-5 w-5" />
+          <span>شارك الموقع</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="center" className="w-[var(--radix-dropdown-menu-trigger-width)]">
         <DropdownMenuItem onClick={shareOnWhatsApp}>
           <WhatsAppIcon className="ml-2 h-4 w-4" />
           <span>واتساب</span>

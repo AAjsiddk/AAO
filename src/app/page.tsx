@@ -28,7 +28,7 @@ const QuoteOfTheDay = () => {
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col bg-background text-foreground">
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background text-foreground">
       <div className="bg-grid-pattern fixed inset-0 -z-10" />
       <div className="bg-radial-gradient fixed inset-0 -z-10" />
 
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="w-full border-t border-border/20 bg-card/50 py-12">
+      <footer className="w-full border-t border-border/20 bg-card/50 py-8">
         <div className="container flex flex-col items-center gap-4 text-center">
           <BookHeart className="h-8 w-8 text-primary" />
           <p className="max-w-lg text-base text-muted-foreground">

@@ -32,11 +32,9 @@ const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function ShareButton() {
   const { toast } = useToast();
   const [url, setUrl] = React.useState('');
-  const [title, setTitle] = React.useState('');
 
   React.useEffect(() => {
     setUrl(window.location.href);
-    setTitle(document.title);
   }, []);
 
   const copyLink = () => {
@@ -48,7 +46,7 @@ export function ShareButton() {
   };
 
   const shareOnWhatsApp = () => {
-    const text = `✨ اكتشف "${title}" ✨\n\nبوابتك الرقمية نحو عالم من السكينة والنور. مصادر إيمانية فريدة لإلهامك وتقوية صلتك بالخالق.\n\n${url}`;
+    const text = `اكتشف "رفيق رمضان"\n\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -56,9 +54,7 @@ export function ShareButton() {
     window.open(
       `https://t.me/share/url?url=${encodeURIComponent(
         url
-      )}&text=${encodeURIComponent(
-        `✨ اكتشف "${title}" ✨\n\nبوابتك الرقمية نحو عالم من السكينة والنور. مصادر إيمانية فريدة لإلهامك وتقوية صلتك بالخالق.`
-      )}`,
+      )}&text=${encodeURIComponent(`اكتشف "رفيق رمضان"`)}`,
       '_blank'
     );
   };

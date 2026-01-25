@@ -13,7 +13,7 @@ const QuoteOfTheDay = () => {
         className="absolute inset-0 -z-10 rounded-2xl"
         style={{
           boxShadow:
-            '0 0 30px -15px hsl(var(--primary) / 0.5), 0 0 15px -15px hsl(var(--accent) / 0.5)',
+            '0 0 30px -15px hsl(var(--primary) / 0.3), 0 0 15px -15px hsl(var(--accent) / 0.3)',
         }}
       />
       <div className="flex flex-col items-center gap-3">
@@ -46,7 +46,7 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto flex w-full flex-1 flex-col items-center justify-center px-4 py-24">
-        <div className="w-full max-w-4xl space-y-6 text-center">
+        <div className="w-full max-w-4xl space-y-4 text-center">
           <div className="flex flex-col items-center space-y-3">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               رفيق{' '}
@@ -54,7 +54,7 @@ export default function Home() {
                 className="text-primary"
                 style={{
                   textShadow:
-                    '0 0 8px hsl(var(--primary) / 0.8), 0 0 16px hsl(var(--accent) / 0.4)',
+                    '0 0 8px hsl(var(--primary) / 0.5), 0 0 16px hsl(var(--accent) / 0.3)',
                 }}
               >
                 رمضان
@@ -62,7 +62,7 @@ export default function Home() {
             </h1>
             <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-md text-muted-foreground md:text-lg">
               ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم،
-              تقرّب، وتكمّل خطوة بخطوة. مش مطلوب الكمال… المهم الاستمرار.
+              تتقرب الي الله، وتكمّل خطوة بخطوة. مش مطلوب الكمال… المهم الاستمرار.
             </p>
           </div>
 

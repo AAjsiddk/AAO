@@ -8,14 +8,7 @@ import {
   Smartphone,
 } from 'lucide-react';
 
-interface CustomIconProps extends React.SVGProps<SVGSVGElement> {}
-
-const SvgWrapper =
-  (IconComponent: ComponentType<CustomIconProps | LucideProps>) =>
-  (props: CustomIconProps | LucideProps) =>
-    createElement(IconComponent, props);
-
-const WhatsAppIcon = (props: CustomIconProps) =>
+const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) =>
   createElement(
     'svg',
     {
@@ -35,7 +28,7 @@ export type LinkItem = {
   title: string;
   description: string;
   href: string;
-  Icon: ComponentType<any>;
+  Icon: ComponentType<LucideProps | React.SVGProps<SVGSVGElement>>;
 };
 
 export const links: LinkItem[] = [
@@ -44,42 +37,42 @@ export const links: LinkItem[] = [
     description:
       'دفتر تفاعلي لتنظيم عبادتك في رمضان ومتابعة أهدافك اليومية بأسلوب مشجّع وعصري.',
     href: 'https://drive.google.com/file/d/19i9mmJwukaGISMEapCkrcHf6L3SaxjsN/view?usp=drivesdk',
-    Icon: SvgWrapper(BookOpenCheck),
+    Icon: BookOpenCheck,
   },
   {
     title: 'تطبيق قراءة الملفات (Lumin)',
     description:
       'تطبيق خفيف ومميز لفتح دفتر رمضان على هاتفك، مع أدوات تصفح مريحة وواضحة.',
     href: 'https://play.google.com/store/apps/details?id=com.luminpdfapp',
-    Icon: SvgWrapper(Smartphone),
+    Icon: Smartphone,
   },
   {
     title: 'موقع نجاتك بيدك',
     description:
       'منصة إسلامية متكاملة تجمع لك الأذكار، القرآن، وروابط نافعة في مكان واحد.',
     href: 'https://in-your-hands.vercel.app/',
-    Icon: SvgWrapper(Globe),
+    Icon: Globe,
   },
   {
     title: 'تطبيق نجاتك بيدك (أندرويد)',
     description:
       'نسخة التطبيق من موقع نجاتك بيدك لتصل للمحتوى بسهولة وفي أي وقت بدون متصفح.',
     href: 'https://www.mediafire.com/file/hka968xggvz4qdj/app-release+-+٢٠٢٦-٠١-٢٥T٢٠٤١٤٢.٤٨٣.apk/file',
-    Icon: SvgWrapper(Download),
+    Icon: Download,
   },
   {
     title: 'بوت تليجرام للتواصل',
     description:
       'بوت مخصّص للاستفسارات والمتابعة، وليصلك كل جديد بسرعة وسهولة.',
     href: 'https://t.me/Ramadan000_bot',
-    Icon: SvgWrapper(Send),
+    Icon: Send,
   },
   {
     title: 'قناة واتساب',
     description:
       'قناة لنشر المحتوى النافع والتنبيهات المهمة أولاً بأول، لتبقى على اتصال دائم بالخير.',
     href: 'https://whatsapp.com/channel/0029VbCC6Ta6buMTCGX6Um0F',
-    Icon: SvgWrapper(WhatsAppIcon),
+    Icon: WhatsAppIcon,
   },
 ];
 

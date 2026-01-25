@@ -37,27 +37,37 @@ export function ThemeProvider({
     try {
       return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
     } catch (e) {
-      console.error('Failed to access localStorage:', e);
+      console.warn('Failed to access localStorage:', e);
       return defaultTheme;
     }
   });
 
   useEffect(() => {
     const root = window.document.documentElement;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    root.classList.remove('light', 'dark');
+    const applyTheme = (currentTheme: Theme) => {
+      root.classList.remove('light', 'dark');
 
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light';
-
-      root.classList.add(systemTheme);
-      return;
+      let effectiveTheme = currentTheme;
+      if (currentTheme === 'system') {
+        effectiveTheme = mediaQuery.matches ? 'dark' : 'light';
+      }
+      
+      root.classList.add(effectiveTheme);
     }
 
-    root.classList.add(theme);
+    const handleSystemChange = (e: MediaQueryListEvent) => {
+      if (theme === 'system') {
+         applyTheme('system');
+      }
+    };
+    
+    applyTheme(theme);
+    
+    mediaQuery.addEventListener('change', handleSystemChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+
   }, [theme]);
 
   const value = {
@@ -66,7 +76,7 @@ export function ThemeProvider({
       try {
         localStorage.setItem(storageKey, theme);
       } catch (e) {
-        console.error('Failed to access localStorage:', e);
+        console.warn('Failed to access localStorage:', e);
       }
       setTheme(theme);
     },

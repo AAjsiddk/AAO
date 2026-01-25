@@ -9,7 +9,7 @@ import { BookHeart, MessageSquareQuote } from 'lucide-react';
 const QuoteOfTheDay = () => {
   return (
     <div
-      className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-2 border-primary/20 bg-card p-6 text-center shadow-2xl shadow-primary/10"
+      className="animate-in fade-in-50 slide-in-from-top-10 duration-700 relative w-full rounded-2xl border-2 border-primary/20 bg-card p-6 text-center shadow-2xl shadow-primary/10 transition-all hover:border-primary/40 hover:shadow-primary/20"
     >
       <div className="flex flex-col items-center gap-4">
         <MessageSquareQuote className="h-8 w-8 text-primary" />
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="w-full max-w-3xl space-y-16 text-center">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="animate-in fade-in-5 slide-in-from-bottom-16 duration-1000 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
-              رفيق <span className="text-primary">رمضان</span>
+              رفيق <span className="text-primary drop-shadow-[0_0_10px_hsl(var(--primary))]">رمضان</span>
             </h1>
             <p className="animate-in fade-in-5 slide-in-from-bottom-12 duration-1000 delay-200 max-w-2xl text-lg text-muted-foreground md:text-xl">
               ابدأ طريقك إلى الله من هنا. محتوى بسيط وأدوات عملية تساعدك تلتزم،

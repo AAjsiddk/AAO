@@ -36,7 +36,7 @@ export const links: LinkItem[] = [
     title: 'تحميل الدفتر',
     description:
       'دفترك الرمضاني للتخطيط والمتابعة اليومية.',
-    href: 'https://drive.google.com/file/d/19i9mmJwukaGISMEapCkrcHf6L3SaxjsN/view?usp=drivesdk',
+    href: 'https://drive.google.com/file/d/1dN5zF9ZFABCYfGoGMHRFPzf3axNMulQs/view?usp=drivesdk',
     Icon: BookOpenCheck,
   },
   {
